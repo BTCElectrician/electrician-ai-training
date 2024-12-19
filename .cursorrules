@@ -1,0 +1,31 @@
+
+/training-data/
+    /1-underground/
+        /site-work/
+            scenarios.json
+        /electrical-bank/
+            scenarios.json
+        /electrical-closet/
+            scenarios.json
+            
+    /2-wall-rough/
+        scenarios.json
+        
+    /3-overhead/
+        /rough/
+            scenarios.json
+        /wire-pull/
+            scenarios.json
+            
+    /4-trim/
+        scenarios.json
+        
+    /5-startup-testing/
+        scenarios.json
+        
+    /6-closeout/
+        scenarios.json
+        
+    /common/
+        scenario-template.json
+        README.md
