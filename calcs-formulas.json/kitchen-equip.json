@@ -1,0 +1,100 @@
+{
+    "electrical_calculations": {
+      "kitchen_equipment_load": {
+        "title": "Commercial Kitchen Equipment Load Calculation",
+        "description": "Method for calculating electrical loads in commercial kitchens, including equipment and receptacle loads",
+        "code_references": {
+          "equipment_requirements": {
+            "section": "220.56",
+            "title": "Kitchen Equipment Load",
+            "applicable_equipment": {
+              "included": [
+                "Commercial electric cooking equipment",
+                "Dishwasher booster heaters",
+                "Water heaters",
+                "Equipment rated 1/4 hp or greater",
+                "Equipment rated 500 watts or greater"
+              ],
+              "excluded": [
+                "Space-heating equipment",
+                "Ventilating equipment",
+                "Air-conditioning equipment"
+              ]
+            },
+            "minimum_load_requirement": "Load shall not be less than sum of largest two kitchen equipment loads"
+          },
+          "receptacle_requirements": {
+            "section": "220.14(I)",
+            "title": "Receptacle Loads",
+            "standard_receptacles": {
+              "load_per_receptacle": 180,
+              "unit": "VA",
+              "applications": [
+                "Single receptacle",
+                "Multiple receptacle on single yoke/strap"
+              ]
+            },
+            "multi_receptacle_assembly": {
+              "load_per_receptacle": 90,
+              "unit": "VA",
+              "condition": "Single piece of equipment with 4 or more receptacles manufactured as one unit"
+            }
+          }
+        },
+        "demand_factors": {
+          "title": "Table 220.56 - Demand Factors for Kitchen Equipment - Other Than Dwelling Unit(s)",
+          "description": "Demand factors based on number of equipment units",
+          "factors": [
+            {
+              "units": 1,
+              "factor": 100
+            },
+            {
+              "units": 2,
+              "factor": 100
+            },
+            {
+              "units": 3,
+              "factor": 90
+            },
+            {
+              "units": 4,
+              "factor": 80
+            },
+            {
+              "units": 5,
+              "factor": 70
+            },
+            {
+              "units": "6 and over",
+              "factor": 65
+            }
+          ]
+        },
+        "calculation_methods": {
+          "basic_load": {
+            "formula": "Demand Load = Total Power Rating × Demand Factor",
+            "example": {
+              "scenario": "Six units totaling 40kW",
+              "calculation": "40kW × 65% = 26kW",
+              "note": "Verify against sum of two largest loads"
+            }
+          },
+          "receptacle_load_examples": {
+            "standard_duplex": {
+              "calculation": "1 duplex receptacle = 180 VA (single yoke)",
+              "note": "Counts as one multiple receptacle on single yoke"
+            },
+            "quad_receptacle": {
+              "calculation": "1 quad receptacle = 4 × 90 VA = 360 VA",
+              "note": "Manufactured as single unit with 4 receptacles"
+            },
+            "two_duplex": {
+              "calculation": "2 separate duplex receptacles = 2 × 180 VA = 360 VA",
+              "note": "Two separate yokes under one cover plate"
+            }
+          }
+        }
+      }
+    }
+  }

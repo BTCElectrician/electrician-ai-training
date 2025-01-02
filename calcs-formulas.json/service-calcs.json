@@ -1,0 +1,119 @@
+{
+    "electrical_calculations": {
+      "service_entrance_equipment_sizing": {
+        "title": "Service Entrance Equipment Requirements and Sizing",
+        "description": "Comprehensive requirements for service entrance equipment including transformers, switchboards, and panelboards",
+        "code_references": {
+          "service_conductors": {
+            "section": "230",
+            "minimum_sizes": {
+              "standard": {
+                "copper": "8 AWG",
+                "aluminum": "6 AWG"
+              },
+              "limited_load": {
+                "minimum": "12 AWG",
+                "note": "Applicable only for specific limited-load installations"
+              },
+              "neutral": {
+                "section": "220.61",
+                "requirement": "Must be sized for maximum unbalanced load"
+              }
+            },
+            "sizing_requirements": {
+              "ampacity": "Must comply with Article 220 calculations",
+              "temperature": {
+                "standard": "75°C typical terminal rating",
+                "adjustments": [
+                  "Ambient temperature correction",
+                  "Conductor bundling factors"
+                ]
+              }
+            }
+          },
+          "transformers": {
+            "section": "450",
+            "protection_requirements": {
+              "over_1000V": {
+                "reference": "Table 450.3(A)",
+                "description": "Protection requirements for transformers over 1000V nominal"
+              },
+              "under_1000V": {
+                "reference": "Table 450.3(B)",
+                "description": "Protection requirements for transformers 1000V or less"
+              }
+            },
+            "installation_requirements": {
+              "guarding": "Must include proper mechanical protection",
+              "disconnecting_means": {
+                "location": [
+                  "Within sight of transformer",
+                  "Remote location with permanent marking"
+                ]
+              }
+            }
+          },
+          "panelboards": {
+            "section": "408",
+            "protection": "OCPDs must not exceed panelboard nameplate rating",
+            "installation": {
+              "mounting": {
+                "required": "Cabinets or identified enclosures",
+                "prohibited": "Face-up or face-down orientation"
+              }
+            }
+          }
+        },
+        "working_space": {
+          "width": {
+            "minimum": "30 inches or width of equipment",
+            "requirement": "Whichever is greater"
+          },
+          "height": {
+            "minimum": "6.5 feet or height of equipment",
+            "requirement": "Whichever is greater"
+          },
+          "clearance": {
+            "doors": "Must allow minimum 90-degree opening"
+          }
+        },
+        "calculation_methods": {
+          "three_phase_power": {
+            "formula": "kVA = (Voltage × Current × 1.732) / 1000",
+            "variables": {
+              "Voltage": {
+                "description": "Line-to-line voltage",
+                "unit": "volts"
+              },
+              "Current": {
+                "description": "Line current per phase",
+                "unit": "amperes"
+              }
+            },
+            "example": {
+              "scenario": "208V, 175A three-phase system",
+              "calculation": "kVA = (208 × 175 × 1.732) / 1000 = 63.05 kVA",
+              "selection": "Use 75 kVA standard size"
+            }
+          }
+        },
+        "practical_guidelines": {
+          "capacity_planning": {
+            "minimum_additional": "20-25% for future expansion",
+            "considerations": [
+              "Projected load growth",
+              "Cost of future upgrades",
+              "Space for additional circuits"
+            ]
+          },
+          "protection_coordination": {
+            "requirements": [
+              "Coordinate OCPDs for selective operation",
+              "Consider available fault current",
+              "Verify SCCR ratings"
+            ]
+          }
+        }
+      }
+    }
+  }
