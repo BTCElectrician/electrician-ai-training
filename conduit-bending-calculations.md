@@ -1,0 +1,431 @@
+{
+  "topic": {
+    "name": "Advanced Conduit Bending",
+    "skill_level": "Advanced"
+  },
+  "overview": {
+    "description": "Advanced conduit bending involves precise techniques for creating complex bends in electrical conduit using manual or hydraulic benders to achieve professional installations.",
+    "key_points": [
+      "Requires understanding of geometric principles and measurements",
+      "Uses specialized tools and bender markings",
+      "Involves multiple bend types and calculations",
+      "Requires precise measurement and layout",
+      "Uses mathematical calculations for spacing",
+      "Critical for aesthetic and large-diameter applications"
+    ],
+    "applications": [
+      "Commercial electrical installations",
+      "Industrial conduit systems",
+      "Complex obstacle navigation",
+      "Parallel runs and offsets",
+      "Architectural electrical installations",
+      "Large industrial conduit systems",
+      "Decorative exposed conduit runs",
+      "Large diameter rigid conduit installations"
+    ]
+  },
+  
+  "core_concepts": [
+    {
+      "concept_name": "Bender Markings",
+      "description": "Essential markings on conduit benders (rim notch, arrow, star, degree marks) used to align and measure precise bending angles.",
+      "key_points": [
+        "Arrow alignment for bend starting points (often for 90° stub-ups)",
+        "Star point typically aligns for back of 90° or reverse bends",
+        "Degree marks help verify angles (e.g., 10°, 22.5°, 30°, 45°, 60°, 90°)"
+      ],
+      "common_mistakes": [
+        "Misaligning marks with conduit",
+        "Incorrect bender orientation",
+        "Not accounting for spring-back on rigid conduit"
+      ]
+    },
+    {
+      "concept_name": "Concentric Bending",
+      "description": "A series of parallel bends with increasing radii to create smooth, aesthetically pleasing curves.",
+      "key_points": [
+        "Maintains consistent spacing between conduits",
+        "Requires careful radius calculation for each bend",
+        "Produces professional appearance for exposed work"
+      ],
+      "common_mistakes": [
+        "Inconsistent bend radii",
+        "Poor spacing calculations",
+        "Improper layout marking"
+      ]
+    },
+    {
+      "concept_name": "Segmented Bending",
+      "description": "Multiple small bends used to create a large radius curve, typically for rigid or large-diameter conduit.",
+      "key_points": [
+        "Used when standard benders can't achieve the required large radius in one shot",
+        "Relies on precise spacing calculations for smooth arcs",
+        "Common in industrial applications"
+      ],
+      "common_mistakes": [
+        "Incorrect segment spacing",
+        "Uneven bend angles",
+        "Poor overall curve smoothness"
+      ]
+    },
+    {
+      "concept_name": "Take-up Calculation",
+      "description": "The amount of conduit consumed by a bend, affecting where you place the first mark. Proper take-up ensures accurate stub heights and offsets.",
+      "key_points": [
+        "Varies by bender type, conduit size (EMT, IMC, Rigid), and angle",
+        "Used to locate the initial mark to achieve a desired stub or bend height",
+        "Must be subtracted from the overall conduit length to avoid overshoot"
+      ],
+      "common_mistakes": [
+        "Using incorrect take-up values for a specific bender type",
+        "Neglecting to subtract take-up from your measured stub length",
+        "Not checking bender documentation or charts for accurate values"
+      ]
+    }
+  ],
+  
+  "procedures": [
+    {
+      "bend_name": "Concentric Bend",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Calculate required radius for each conduit in the group.",
+          "tips": [
+            "Start with the smallest (innermost) radius",
+            "Maintain consistent spacing between conduits"
+          ]
+        },
+        {
+          "step_number": 2,
+          "description": "Mark bend points on each conduit.",
+          "tips": [
+            "Use a template or jig for repetitive spacing",
+            "Double-check measurements before bending"
+          ]
+        },
+        {
+          "step_number": 3,
+          "description": "Bend each conduit sequentially, starting with the smallest radius.",
+          "tips": [
+            "Verify each radius after bending",
+            "Keep bends in the same plane to avoid compound angles"
+          ]
+        }
+      ],
+      "verification": "Confirm uniform spacing and smooth appearance of the concentric arcs."
+    },
+    {
+      "bend_name": "Segmented Bend",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Calculate total developed length and the spacing between each segment.",
+          "tips": [
+            "Use formula: Radius × 1.57 = Developed Length (approx. for 90° bend)",
+            "Divide by the number of segments"
+          ]
+        },
+        {
+          "step_number": 2,
+          "description": "Mark each segment point on the conduit.",
+          "tips": [
+            "Use a consistent marking method",
+            "Verify total length matches your developed length"
+          ]
+        },
+        {
+          "step_number": 3,
+          "description": "Make small bends at each marked point.",
+          "tips": [
+            "Maintain consistent bend angles",
+            "Check alignment frequently to avoid drift"
+          ]
+        }
+      ],
+      "verification": "Measure the final radius and check for smooth transitions between bends."
+    },
+    {
+      "bend_name": "Three-Point Saddle",
+      "steps": [
+        {
+          "step_number": 1,
+          "description": "Mark three points for the beginning, peak, and end of the saddle.",
+          "tips": [
+            "Center mark is for the highest point of the obstruction",
+            "Space outer marks according to desired offset"
+          ]
+        },
+        {
+          "step_number": 2,
+          "description": "Bend the first angle (e.g., 22°) using the star point.",
+          "tips": [
+            "Apply steady, even force",
+            "Keep the conduit level to prevent side twist"
+          ]
+        },
+        {
+          "step_number": 3,
+          "description": "Create the center bend (e.g., 45°) using the bender’s notch.",
+          "tips": [
+            "Flip the conduit if your bender method requires it",
+            "Ensure all bends remain in the same plane"
+          ]
+        }
+      ],
+      "verification": "Check that the saddle lays flat, with the correct clearance above the obstruction.",
+      "measurement_tables": {
+        "title": "3 Point Saddle Bend Table",
+        "bend_configurations": {
+          "45_degree": {
+            "center_bend": 45,
+            "return_bends": 22.5,
+            "measurements": {
+              "base_shrink": "3/16",
+              "base_distance_off_center": "2-1/2",
+              "per_inch_measurements": [
+                {
+                  "obstruction_height": 1,
+                  "shrink_amount": "3/16",
+                  "distance_off_center": "2-1/2"
+                },
+                {
+                  "obstruction_height": 2,
+                  "shrink_amount": "3/8",
+                  "distance_off_center": "5"
+                },
+                {
+                  "obstruction_height": 3,
+                  "shrink_amount": "9/16",
+                  "distance_off_center": "7-1/2"
+                },
+                {
+                  "obstruction_height": 4,
+                  "shrink_amount": "3/4",
+                  "distance_off_center": "10"
+                },
+                {
+                  "obstruction_height": 5,
+                  "shrink_amount": "15/16",
+                  "distance_off_center": "12-1/2"
+                },
+                {
+                  "obstruction_height": 6,
+                  "shrink_amount": "1-1/8",
+                  "distance_off_center": "15"
+                }
+              ]
+            }
+          },
+          "60_degree": {
+            "center_bend": 60,
+            "return_bends": 30,
+            "measurements": {
+              "base_shrink": "1/4",
+              "base_distance_off_center": "2",
+              "per_inch_measurements": [
+                {
+                  "obstruction_height": 1,
+                  "shrink_amount": "1/4",
+                  "distance_off_center": "2"
+                },
+                {
+                  "obstruction_height": 2,
+                  "shrink_amount": "1/2",
+                  "distance_off_center": "4"
+                },
+                {
+                  "obstruction_height": 3,
+                  "shrink_amount": "3/4",
+                  "distance_off_center": "6"
+                },
+                {
+                  "obstruction_height": 4,
+                  "shrink_amount": "1",
+                  "distance_off_center": "8"
+                },
+                {
+                  "obstruction_height": 5,
+                  "shrink_amount": "1-1/4",
+                  "distance_off_center": "10"
+                },
+                {
+                  "obstruction_height": 6,
+                  "shrink_amount": "1-1/2",
+                  "distance_off_center": "12"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ],
+  
+  "calculations": [
+    {
+      "formula_name": "Segmented Bend Spacing",
+      "formula": "Spacing = (Radius × 1.57) ÷ Number of Segments",
+      "variables": {
+        "Radius": "Desired radius of final curve",
+        "1.57": "Constant (π÷2)",
+        "Number of Segments": "Chosen number of bends"
+      },
+      "example": {
+        "scenario": "Creating a 24-inch radius curve with 8 segments",
+        "solution": "(24 × 1.57) ÷ 8 = 4.71 inches between segments"
+      }
+    },
+    {
+      "formula_name": "Offset Calculation",
+      "formula": "Spacing = Offset ÷ sin(angle)",
+      "variables": {
+        "Spacing": "Distance between bend marks",
+        "Offset": "Height of required offset",
+        "angle": "Chosen bend angle (typically 45°)"
+      },
+      "example": {
+        "scenario": "5-inch offset using 45-degree bends",
+        "solution": "5 inches ÷ sin(45°) = 7.07 inches between marks"
+      }
+    },
+    {
+      "formula_name": "Offset Bend Formula",
+      "formula": "Distance between bends = Depth of offset x Multiplier",
+      "angles": [
+        {
+          "angle": "10° x 10°",
+          "multiplier": 6,
+          "shrinkage_per_inch": "1/16"
+        },
+        {
+          "angle": "22 1/2° x 22 1/2°",
+          "multiplier": 2.6,
+          "shrinkage_per_inch": "3/16"
+        },
+        {
+          "angle": "30° x 30°",
+          "multiplier": 2,
+          "shrinkage_per_inch": "1/4"
+        },
+        {
+          "angle": "45° x 45°",
+          "multiplier": 1.4,
+          "shrinkage_per_inch": "3/8"
+        },
+        {
+          "angle": "60° x 60°",
+          "multiplier": 1.2,
+          "shrinkage_per_inch": "1/2"
+        }
+      ],
+      "guidelines": [
+        "For offsets 5 inches or more use 45° or 60° bends.",
+        "For offsets of 3 or 4 inches use 30° bends.",
+        "For offsets of 2 inches in depth use 22 1/2° bends.",
+        "For small offsets of 1 inch or less use 10° bends."
+      ]
+    }
+  ],
+  
+  "quick_reference": {
+    "multipliers": {
+      "offset": {
+        "30_degree": 2.0,
+        "45_degree": 1.414,
+        "60_degree": 1.155
+      },
+      "three_point_saddle": {
+        "22_45_22": {
+          "center_spacing": 2.6,
+          "total_spacing": 5.2
+        },
+        "15_30_15": {
+          "center_spacing": 3.8,
+          "total_spacing": 7.6
+        }
+      }
+    },
+    "shrinkage": {
+      "90_degree": {
+        "EMT": "⅛ inch per inch of bend radius",
+        "Rigid": "3/16 inch per inch of bend radius"
+      }
+    },
+    "field_formulas": {
+      "parallel_offset": "Distance × multiplier = spacing",
+      "concentric_radius": "Inner radius + (pipe OD + spacing) × (ring number - 1)",
+      "developed_length": "Radius × 6.28 × (degrees/360)",
+      "travel": "Rise × 1.414 (for 45°)"
+    },
+    "conversions": {
+      "decimal_to_fraction": {
+        ".125": "⅛",
+        ".250": "¼",
+        ".375": "⅜",
+        ".500": "½",
+        ".625": "⅝",
+        ".750": "¾",
+        ".875": "⅞"
+      },
+      "degrees_to_rise": {
+        "per_12_inches": {
+          "30": "6",
+          "45": "8.5",
+          "60": "10.4"
+        }
+      }
+    },
+    "offset_bend_chart": {
+      "22_1_2": {
+        "angle": "22 1/2°",
+        "data": [
+          {"depth": "1", "between_bends": "5 1/4", "shrink_amount": "3/8"},
+          {"depth": "2 1/2", "between_bends": "6 1/2", "shrink_amount": "1/2"},
+          // ... more data ...
+        ]
+      },
+      "30": {
+        "angle": "30°",
+        "data": [
+          {"depth": "3", "between_bends": "6", "shrink_amount": "3/4"},
+          // ... more data ...
+        ]
+      },
+      // ... more angles ...
+    }
+  },
+  
+  "best_practices": [
+    {
+      "practice": "Always bend on a solid, flat surface",
+      "rationale": "Ensures stability and prevents conduit distortion during bending"
+    },
+    {
+      "practice": "Apply controlled, steady force",
+      "rationale": "Prevents kinking and ensures smooth, consistent bends"
+    },
+    {
+      "practice": "Maintain proper conduit support",
+      "rationale": "Prevents the conduit from twisting; keeps bends in the same plane"
+    },
+    {
+      "practice": "Create templates for repetitive concentric bends",
+      "rationale": "Ensures uniform results across multiple conduits"
+    },
+    {
+      "practice": "Use mechanical or hydraulic benders for large diameter conduit",
+      "rationale": "Provides consistent force and reduces physical strain"
+    },
+    {
+      "practice": "Mark all bends before starting",
+      "rationale": "Minimizes cumulative errors and guarantees correct spacing"
+    }
+  ],
+  
+  "terminology": {
+    "Outside Diameter (OD)": "The outer measurement of a conduit, taken from one outer surface to the opposite outer surface.",
+    "Take-up": "The length of conduit 'consumed' by the arc of the bend, determined by the distance from the bender's alignment mark (arrow, star) to achieve a specific stub height.",
+    "Shrink": "A reduction in the measured length after bending, often referenced in offset or saddle bends. It's the difference between the theoretical conduit length and the actual measured distance once the bend is formed."
+  }
+}
