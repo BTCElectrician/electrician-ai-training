@@ -166,7 +166,7 @@
         },
         {
           "step_number": 3,
-          "description": "Create the center bend (e.g., 45°) using the bender’s notch.",
+          "description": "Create the center bend (e.g., 45°) using the bender's notch.",
           "tips": [
             "Flip the conduit if your bender method requires it",
             "Ensure all bends remain in the same plane"
@@ -381,18 +381,15 @@
         "angle": "22 1/2°",
         "data": [
           {"depth": "1", "between_bends": "5 1/4", "shrink_amount": "3/8"},
-          {"depth": "2 1/2", "between_bends": "6 1/2", "shrink_amount": "1/2"},
-          // ... more data ...
+          {"depth": "2 1/2", "between_bends": "6 1/2", "shrink_amount": "1/2"}
         ]
       },
       "30": {
         "angle": "30°",
         "data": [
-          {"depth": "3", "between_bends": "6", "shrink_amount": "3/4"},
-          // ... more data ...
+          {"depth": "3", "between_bends": "6", "shrink_amount": "3/4"}
         ]
-      },
-      // ... more angles ...
+      }
     }
   },
   
