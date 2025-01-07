@@ -1,0 +1,396 @@
+{
+    "data": [
+      {
+        "category": "Augmented Category 6",
+        "cable_name": "GigaLAN 10",
+        "type": "4 pr UTP",
+        "outer_diameter_in": 0.295,
+        "fill_by_trade_size": {
+          "0.75": 2,
+          "1": 4,
+          "1.25": 7,
+          "1.5": 10,
+          "2": 18,
+          "2.5": 28,
+          "3": 41,
+          "3.5": 56,
+          "4": 73
+        }
+      },
+      {
+        "category": "Category 6E",
+        "cable_name": "GigaLAN",
+        "type": "4 pr UTP",
+        "outer_diameter_in": 0.244,
+        "fill_by_trade_size": {
+          "0.75": 3,
+          "1": 6,
+          "1.25": 10,
+          "1.5": 15,
+          "2": 27,
+          "2.5": 42,
+          "3": 60,
+          "3.5": 82,
+          "4": 107
+        }
+      },
+      {
+        "category": "Category 6e",
+        "cable_name": "AdvanceNet",
+        "type": "4 pr UTP",
+        "outer_diameter_in": 0.228,
+        "fill_by_trade_size": {
+          "0.75": 4,
+          "1": 7,
+          "1.25": 12,
+          "1.5": 17,
+          "2": 30,
+          "2.5": 48,
+          "3": 69,
+          "3.5": 94,
+          "4": 123
+        }
+      },
+      {
+        "category": "Category 6",
+        "cable_name": "Cat 6",
+        "type": "4 pr F/UTP",
+        "outer_diameter_in": 0.255,
+        "fill_by_trade_size": {
+          "0.75": 3,
+          "1": 6,
+          "1.25": 9,
+          "1.5": 14,
+          "2": 24,
+          "2.5": 38,
+          "3": 55,
+          "3.5": 75,
+          "4": 98
+        }
+      },
+      {
+        "category": "Category 6",
+        "cable_name": "6 LAN",
+        "type": "4 pr UTP",
+        "outer_diameter_in": 0.208,
+        "fill_by_trade_size": {
+          "0.75": 5,
+          "1": 9,
+          "1.25": 14,
+          "1.5": 21,
+          "2": 37,
+          "2.5": 57,
+          "3": 83,
+          "3.5": 113,
+          "4": 148
+        }
+      },
+      {
+        "category": "Category 5E",
+        "cable_name": "MegaLAN",
+        "type": "4 pr UTP",
+        "outer_diameter_in": 0.19,
+        "fill_by_trade_size": {
+          "0.75": 6,
+          "1": 11,
+          "1.25": 17,
+          "1.5": 25,
+          "2": 44,
+          "2.5": 69,
+          "3": 99,
+          "3.5": 135,
+          "4": 177
+        }
+      },
+      {
+        "category": "Category 5E",
+        "cable_name": "MegaLAN",
+        "type": "4 pr UTP",
+        "outer_diameter_in": 0.224,
+        "fill_by_trade_size": {
+          "0.75": 4,
+          "1": 8,
+          "1.25": 12,
+          "1.5": 18,
+          "2": 32,
+          "2.5": 50,
+          "3": 71,
+          "3.5": 97,
+          "4": 127
+        }
+      },
+      {
+        "category": "Category 5e",
+        "cable_name": "5e LAN",
+        "type": "4 pr UTP",
+        "outer_diameter_in": 0.18,
+        "fill_by_trade_size": {
+          "0.75": 7,
+          "1": 12,
+          "1.25": 19,
+          "1.5": 27,
+          "2": 49,
+          "2.5": 77,
+          "3": 111,
+          "3.5": 151,
+          "4": 197
+        }
+      },
+      {
+        "category": "Category 5e",
+        "cable_name": "5e LAN",
+        "type": "4 pr UTP",
+        "outer_diameter_in": 0.218,
+        "fill_by_trade_size": {
+          "0.75": 4,
+          "1": 8,
+          "1.25": 13,
+          "1.5": 19,
+          "2": 33,
+          "2.5": 52,
+          "3": 75,
+          "3.5": 103,
+          "4": 134
+        }
+      },
+      {
+        "category": "Category 5e",
+        "cable_name": "5e LAN",
+        "type": "25 pr UTP",
+        "outer_diameter_in": 0.43,
+        "fill_by_trade_size": {
+          "0.75": 1,
+          "1": 2,
+          "1.25": 3,
+          "1.5": 5,
+          "2": 8,
+          "2.5": 13,
+          "3": 19,
+          "3.5": 26,
+          "4": 34
+        }
+      },
+      {
+        "category": "Category 5e",
+        "cable_name": "5e LAN",
+        "type": "25 pr F/UTP",
+        "outer_diameter_in": 0.472,
+        "fill_by_trade_size": {
+          "0.75": 1,
+          "1": 1,
+          "1.25": 2,
+          "1.5": 4,
+          "2": 7,
+          "2.5": 11,
+          "3": 16,
+          "3.5": 22,
+          "4": 28
+        }
+      },
+      {
+        "category": "Category 5",
+        "cable_name": "Cat 5",
+        "type": "4 pr UTP",
+        "outer_diameter_in": 0.18,
+        "fill_by_trade_size": {
+          "0.75": 7,
+          "1": 12,
+          "1.25": 19,
+          "1.5": 27,
+          "2": 49,
+          "2.5": 77,
+          "3": 111,
+          "3.5": 151,
+          "4": 197
+        }
+      },
+      {
+        "category": "Category 5",
+        "cable_name": "Cat 5",
+        "type": "4 pr F/UTP",
+        "outer_diameter_in": 0.23,
+        "fill_by_trade_size": {
+          "0.75": 4,
+          "1": 7,
+          "1.25": 12,
+          "1.5": 17,
+          "2": 30,
+          "2.5": 47,
+          "3": 68,
+          "3.5": 92,
+          "4": 121
+        }
+      },
+      {
+        "category": "Category 5",
+        "cable_name": "Cat 5",
+        "type": "25 pr UTP",
+        "outer_diameter_in": 0.43,
+        "fill_by_trade_size": {
+          "0.75": 1,
+          "1": 2,
+          "1.25": 3,
+          "1.5": 5,
+          "2": 8,
+          "2.5": 13,
+          "3": 19,
+          "3.5": 26,
+          "4": 34
+        }
+      },
+      {
+        "category": "Category 5",
+        "cable_name": "Cat 5",
+        "type": "25 pr F/UTP",
+        "outer_diameter_in": 0.472,
+        "fill_by_trade_size": {
+          "0.75": 1,
+          "1": 1,
+          "1.25": 2,
+          "1.5": 4,
+          "2": 7,
+          "2.5": 11,
+          "3": 16,
+          "3.5": 22,
+          "4": 28
+        }
+      },
+      {
+        "category": "Category 3",
+        "cable_name": "Cat 3",
+        "type": "4 pr UTP",
+        "outer_diameter_in": 0.161,
+        "fill_by_trade_size": {
+          "0.75": 8,
+          "1": 15,
+          "1.25": 24,
+          "1.5": 34,
+          "2": 61,
+          "2.5": 96,
+          "3": 139,
+          "3.5": 189,
+          "4": 247
+        }
+      },
+      {
+        "category": "Category 3",
+        "cable_name": "Cat 3",
+        "type": "4 pr F/UTP",
+        "outer_diameter_in": 0.189,
+        "fill_by_trade_size": {
+          "0.75": 6,
+          "1": 11,
+          "1.25": 17,
+          "1.5": 25,
+          "2": 44,
+          "2.5": 70,
+          "3": 100,
+          "3.5": 137,
+          "4": 179
+        }
+      },
+      {
+        "category": "Category 3",
+        "cable_name": "Cat 3",
+        "type": "25 pr UTP",
+        "outer_diameter_in": 0.389,
+        "fill_by_trade_size": {
+          "0.75": 2,
+          "1": 3,
+          "1.25": 5,
+          "1.5": 8,
+          "2": 14,
+          "2.5": 22,
+          "3": 31,
+          "3.5": 42,
+          "4": 56
+        }
+      },
+      {
+        "category": "Category 3",
+        "cable_name": "Cat 3",
+        "type": "25 pr F/UTP",
+        "outer_diameter_in": 0.346,
+        "fill_by_trade_size": {
+          "0.75": 2,
+          "1": 3,
+          "1.25": 5,
+          "1.5": 7,
+          "2": 13,
+          "2.5": 21,
+          "3": 30,
+          "3.5": 41,
+          "4": 53
+        }
+      },
+      {
+        "category": "Category 3",
+        "cable_name": "Cat 3",
+        "type": "50 pr UTP",
+        "outer_diameter_in": 0.55,
+        "fill_by_trade_size": {
+          "0.75": 0,
+          "1": 1,
+          "1.25": 1,
+          "1.5": 2,
+          "2": 4,
+          "2.5": 7,
+          "3": 10,
+          "3.5": 15,
+          "4": 21
+        }
+      },
+      {
+        "category": "Category 3",
+        "cable_name": "Cat 3",
+        "type": "100 pr UTP",
+        "outer_diameter_in": 0.786,
+        "fill_by_trade_size": {
+          "0.75": 0,
+          "1": 0,
+          "1.25": 0,
+          "1.5": 1,
+          "2": 1,
+          "2.5": 3,
+          "3": 5,
+          "3.5": 7,
+          "4": 10
+        }
+      },
+      {
+        "category": "Category 3",
+        "cable_name": "Cat 3",
+        "type": "200 pr UTP",
+        "outer_diameter_in": 1.088,
+        "fill_by_trade_size": {
+          "0.75": 0,
+          "1": 0,
+          "1.25": 0,
+          "1.5": 0,
+          "2": 0,
+          "2.5": 1,
+          "3": 1,
+          "3.5": 2,
+          "4": 3
+        }
+      },
+      {
+        "category": "Category 3",
+        "cable_name": "Cat 3",
+        "type": "300 pr UTP",
+        "outer_diameter_in": 1.334,
+        "fill_by_trade_size": {
+          "0.75": 0,
+          "1": 0,
+          "1.25": 0,
+          "1.5": 0,
+          "2": 1,
+          "2.5": 1,
+          "3": 2,
+          "3.5": 3,
+          "4": 5
+        }
+      }
+    ]
+  }
+  
