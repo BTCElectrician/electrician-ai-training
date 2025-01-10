@@ -1,0 +1,199 @@
+{
+  "code_references": [
+    {
+      "title": "Equipment Grounding Conductor Sizing",
+      "section": "NEC 250.122",
+      "description": "Specifies minimum size of equipment grounding conductors based on the rating of overcurrent protective devices",
+      "key_points": [
+        "Must be sized according to Table 250.122",
+        "Must be increased proportionally when ungrounded conductors are adjusted",
+        "Parallel runs require special sizing considerations"
+      ]
+    },
+    {
+      "title": "Grounding Electrode System Requirements",
+      "section": "NEC 250.50-70",
+      "description": "Details requirements for grounding electrode systems and conductor sizing",
+      "key_points": [
+        "Minimum 8 AWG copper for rod and pipe electrodes",
+        "Size per Table 250.66 for service conductors",
+        "Concrete-encased electrode requirements"
+      ]
+    },
+    {
+      "title": "Main Bonding Jumper Sizing",
+      "section": "NEC 250.28",
+      "description": "Requirements for sizing main bonding jumpers based on service size",
+      "key_points": [
+        "Must not be smaller than largest service conductor",
+        "Sized according to Table 250.102(C)(1)",
+        "Must be properly identified"
+      ]
+    }
+  ],
+
+  "calculation_methods": {
+    "egc_sizing": {
+      "basic_formula": {
+        "equation": "EGC Size = Table 250.122 value based on OCPD rating",
+        "variables": {
+          "OCPD_rating": "Rating of overcurrent protective device in amperes",
+          "conductor_material": "Copper or aluminum",
+          "temperature_rating": "60°C, 75°C, or 90°C"
+        },
+        "steps": [
+          "1. Determine OCPD rating",
+          "2. Consult Table 250.122 for minimum size",
+          "3. Adjust for parallel conductors if applicable",
+          "4. Verify temperature ratings compatibility"
+        ]
+      },
+      "example": {
+        "scenario": "Size EGC for a 200A circuit with copper conductors",
+        "solution": {
+          "step1": {
+            "description": "Look up 200A in Table 250.122",
+            "result": "6 AWG copper required"
+          },
+          "step2": {
+            "description": "Check temperature compatibility",
+            "result": "6 AWG rated for required temperature"
+          }
+        }
+      }
+    }
+  },
+
+  "practical_considerations": {
+    "installation_tips": [
+      "Always pull EGC with phase conductors",
+      "Use green insulation or proper marking",
+      "Ensure solid connections at all points",
+      "Test continuity before energizing"
+    ],
+    "common_mistakes": [
+      "Undersizing EGC when parallel conductors are used",
+      "Forgetting to increase EGC when ungrounded conductors are upsized",
+      "Improper termination methods",
+      "Missing bonding bushings when required"
+    ],
+    "troubleshooting_guide": {
+      "high_resistance": "Check all connections and bonding points",
+      "ground_faults": "Verify proper sizing and installation of EGC",
+      "multiple_paths": "Eliminate parallel ground paths",
+      "testing_methods": "Use proper ground resistance testing equipment"
+    }
+  },
+
+  "reference_tables": {
+    "table_250_122": {
+      "title": "Minimum Size Equipment Grounding Conductors",
+      "description": "Table 250.122 - Minimum size equipment grounding conductors for grounding raceway and equipment based on the rating or setting of the automatic overcurrent device in the circuit ahead of the equipment.",
+      "data": [
+        {
+          "amperes": 15,
+          "copper": "14 AWG",
+          "aluminum_or_copper_clad_aluminum": "12 AWG"
+        },
+        {
+          "amperes": 20,
+          "copper": "12 AWG",
+          "aluminum_or_copper_clad_aluminum": "10 AWG"
+        },
+        {
+          "amperes": 60,
+          "copper": "10 AWG",
+          "aluminum_or_copper_clad_aluminum": "8 AWG"
+        },
+        {
+          "amperes": 100,
+          "copper": "8 AWG",
+          "aluminum_or_copper_clad_aluminum": "6 AWG"
+        },
+        {
+          "amperes": 200,
+          "copper": "6 AWG",
+          "aluminum_or_copper_clad_aluminum": "4 AWG"
+        },
+        {
+          "amperes": 300,
+          "copper": "4 AWG",
+          "aluminum_or_copper_clad_aluminum": "2 AWG"
+        },
+        {
+          "amperes": 400,
+          "copper": "3 AWG",
+          "aluminum_or_copper_clad_aluminum": "1 AWG"
+        },
+        {
+          "amperes": 500,
+          "copper": "2 AWG",
+          "aluminum_or_copper_clad_aluminum": "1/0 AWG"
+        },
+        {
+          "amperes": 600,
+          "copper": "1 AWG",
+          "aluminum_or_copper_clad_aluminum": "2/0 AWG"
+        },
+        {
+          "amperes": 800,
+          "copper": "1/0 AWG",
+          "aluminum_or_copper_clad_aluminum": "3/0 AWG"
+        },
+        {
+          "amperes": 1000,
+          "copper": "2/0 AWG",
+          "aluminum_or_copper_clad_aluminum": "4/0 AWG"
+        },
+        {
+          "amperes": 1200,
+          "copper": "3/0 AWG",
+          "aluminum_or_copper_clad_aluminum": "250 kcmil"
+        },
+        {
+          "amperes": 1600,
+          "copper": "4/0 AWG",
+          "aluminum_or_copper_clad_aluminum": "350 kcmil"
+        },
+        {
+          "amperes": 2000,
+          "copper": "250 kcmil",
+          "aluminum_or_copper_clad_aluminum": "400 kcmil"
+        },
+        {
+          "amperes": 2500,
+          "copper": "350 kcmil",
+          "aluminum_or_copper_clad_aluminum": "600 kcmil"
+        },
+        {
+          "amperes": 3000,
+          "copper": "400 kcmil",
+          "aluminum_or_copper_clad_aluminum": "600 kcmil"
+        },
+        {
+          "amperes": 4000,
+          "copper": "500 kcmil",
+          "aluminum_or_copper_clad_aluminum": "750 kcmil"
+        },
+        {
+          "amperes": 5000,
+          "copper": "700 kcmil",
+          "aluminum_or_copper_clad_aluminum": "1250 kcmil"
+        },
+        {
+          "amperes": 6000,
+          "copper": "800 kcmil",
+          "aluminum_or_copper_clad_aluminum": "1250 kcmil"
+        }
+      ],
+      "notes": [
+        {
+          "note": "Where necessary to comply with 250.4(A)(5) or (B)(4), the equipment grounding conductor shall be sized larger than given in this table."
+        },
+        {
+          "note": "See installation restrictions in 250.120."
+        }
+      ]
+    }
+  }
+}

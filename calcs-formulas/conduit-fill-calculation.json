@@ -1,0 +1,171 @@
+{
+    "calculation_context": {
+      "title": "Conduit Fill Calculation",
+      "description": "Determine the appropriate conduit size based on the fill percentage of conductors, ensuring compliance with NEC requirements for heat dissipation and wire pulling."
+    },
+    "code_references": [
+      {
+        "title": "Basic Fill Requirements",
+        "section": "NEC Chapter 9, Table 1",
+        "description": "Maximum fill percentages for conductors to ensure proper heat dissipation.",
+        "key_points": [
+          {"conductor_count": 1, "max_fill": "53%"},
+          {"conductor_count": 2, "max_fill": "31%"},
+          {"conductor_count": ">2", "max_fill": "40%"}
+        ]
+      },
+      {
+        "title": "Conductor Area Reference",
+        "section": "NEC Chapter 9, Table 5",
+        "description": "Provides cross-sectional areas for different wire sizes and types."
+      }
+    ],
+    "calculation_methods": {
+      "basic_formula": {
+        "equation": "Fill Percentage = (Total Cable Area / Conduit Area) × 100",
+        "variables": {
+          "total_cable_area": "Sum of cross-sectional areas of all conductors including ground wires",
+          "conduit_area": "Internal cross-sectional area of the selected conduit",
+          "fill_percentage": "Percentage of conduit filled by conductors"
+        }
+      },
+      "steps": [
+        "1. Calculate the total cross-sectional area of all conductors using NEC Chapter 9, Table 5.",
+        "2. Multiply the conductor area by the number of conductors.",
+        "3. Refer to the NEC Chapter 9, Table 4 to find the internal cross-sectional area for the conduit type and size.",
+        "4. Divide the total conductor area by the conduit area, then multiply by 100 to determine the fill percentage.",
+        "5. Ensure the fill percentage does not exceed the NEC limit of 40% for more than two conductors."
+      ],
+      "example": {
+        "scenario": "Installing 3-12 AWG THWN, 4-10 AWG THWN, and 8-8 AWG THWN conductors in EMT",
+        "solution": [
+          {
+            "step": "Calculate total conductor area",
+            "details": [
+              "3 × 12 AWG THWN (0.0133 sq in) = 0.0399 sq in",
+              "4 × 10 AWG THWN (0.0211 sq in) = 0.0844 sq in",
+              "8 × 8 AWG THWN (0.0366 sq in) = 0.2928 sq in",
+              "Total area = 0.4171 sq in"
+            ]
+          },
+          {
+            "step": "Select appropriate EMT size",
+            "details": "1¼ inch EMT required (0.598 sq in area at 40% fill)"
+          }
+        ]
+      }
+    },
+    "practical_considerations": {
+      "installation_tips": [
+        "Include all conductors in calculations, including ground wires.",
+        "Consider future conductor additions when sizing conduit.",
+        "Use proper wire pulling techniques to prevent damage."
+      ],
+      "common_mistakes": [
+        "Omitting ground conductors from calculations.",
+        "Confusing ampacity adjustment factors with fill calculations.",
+        "Assuming 40% fill is always acceptable without checking NEC specifics."
+      ]
+    },
+    "conduit_dimensions": {
+      "EMT": [
+        {"trade_size": "1/4", "over_2_wires_40_percent_in2": 0.122},
+        {"trade_size": "3/4", "over_2_wires_40_percent_in2": 0.213},
+        {"trade_size": "1", "over_2_wires_40_percent_in2": 0.346},
+        {"trade_size": "1 1/4", "over_2_wires_40_percent_in2": 0.598},
+        {"trade_size": "1 1/2", "over_2_wires_40_percent_in2": 0.814},
+        {"trade_size": "2", "over_2_wires_40_percent_in2": 1.342},
+        {"trade_size": "2 1/2", "over_2_wires_40_percent_in2": 2.343},
+        {"trade_size": "3", "over_2_wires_40_percent_in2": 3.538},
+        {"trade_size": "3 1/2", "over_2_wires_40_percent_in2": 4.618},
+        {"trade_size": "4", "over_2_wires_40_percent_in2": 5.901},
+        {"trade_size": "5", "over_2_wires_40_percent_in2": 8.085},
+        {"trade_size": "6", "over_2_wires_40_percent_in2": 11.663}
+      ],
+      "FMC": [
+        {"trade_size": "3/4", "over_2_wires_40_percent_in2": 0.213},
+        {"trade_size": "1", "over_2_wires_40_percent_in2": 0.327},
+        {"trade_size": "1 1/4", "over_2_wires_40_percent_in2": 0.511},
+        {"trade_size": "1 1/2", "over_2_wires_40_percent_in2": 0.743},
+        {"trade_size": "2", "over_2_wires_40_percent_in2": 1.307},
+        {"trade_size": "2 1/2", "over_2_wires_40_percent_in2": 1.963},
+        {"trade_size": "3", "over_2_wires_40_percent_in2": 2.827},
+        {"trade_size": "3 1/2", "over_2_wires_40_percent_in2": 3.848},
+        {"trade_size": "4", "over_2_wires_40_percent_in2": 5.027}
+      ],
+      "IMC": [
+        {"trade_size": "3/8", "over_2_wires_40_percent_in2": null},
+        {"trade_size": "1/2", "over_2_wires_40_percent_in2": 0.137},
+        {"trade_size": "3/4", "over_2_wires_40_percent_in2": 0.235},
+        {"trade_size": "1", "over_2_wires_40_percent_in2": 0.384},
+        {"trade_size": "1 1/4", "over_2_wires_40_percent_in2": 0.659},
+        {"trade_size": "1 1/2", "over_2_wires_40_percent_in2": 0.890},
+        {"trade_size": "2", "over_2_wires_40_percent_in2": 1.452},
+        {"trade_size": "2 1/2", "over_2_wires_40_percent_in2": 2.054},
+        {"trade_size": "3", "over_2_wires_40_percent_in2": 3.169},
+        {"trade_size": "3 1/2", "over_2_wires_40_percent_in2": 4.234},
+        {"trade_size": "4", "over_2_wires_40_percent_in2": 5.452},
+        {"trade_size": "5", "over_2_wires_40_percent_in2": 8.528},
+        {"trade_size": "6", "over_2_wires_40_percent_in2": 12.304}
+      ],
+      "LFMC": [
+        {"trade_size": "3/8", "over_2_wires_40_percent_in2": 0.077},
+        {"trade_size": "1/2", "over_2_wires_40_percent_in2": 0.125},
+        {"trade_size": "3/4", "over_2_wires_40_percent_in2": 0.216},
+        {"trade_size": "1", "over_2_wires_40_percent_in2": 0.349},
+        {"trade_size": "1 1/4", "over_2_wires_40_percent_in2": 0.611},
+        {"trade_size": "1 1/2", "over_2_wires_40_percent_in2": 0.792},
+        {"trade_size": "2", "over_2_wires_40_percent_in2": 1.298},
+        {"trade_size": "2 1/2", "over_2_wires_40_percent_in2": 1.953},
+        {"trade_size": "3", "over_2_wires_40_percent_in2": 2.990},
+        {"trade_size": "3 1/2", "over_2_wires_40_percent_in2": 3.893},
+        {"trade_size": "4", "over_2_wires_40_percent_in2": 5.077}
+      ],
+      "RMC": [
+        {"trade_size": "3/8", "over_2_wires_40_percent_in2": null},
+        {"trade_size": "1/2", "over_2_wires_40_percent_in2": 0.125},
+        {"trade_size": "3/4", "over_2_wires_40_percent_in2": 0.220},
+        {"trade_size": "1", "over_2_wires_40_percent_in2": 0.355},
+        {"trade_size": "1 1/4", "over_2_wires_40_percent_in2": 0.610},
+        {"trade_size": "1 1/2", "over_2_wires_40_percent_in2": 0.829},
+        {"trade_size": "2", "over_2_wires_40_percent_in2": 1.363},
+        {"trade_size": "2 1/2", "over_2_wires_40_percent_in2": 1.946},
+        {"trade_size": "3", "over_2_wires_40_percent_in2": 3.000},
+        {"trade_size": "3 1/2", "over_2_wires_40_percent_in2": 4.004},
+        {"trade_size": "4", "over_2_wires_40_percent_in2": 5.153},
+        {"trade_size": "5", "over_2_wires_40_percent_in2": 8.085},
+        {"trade_size": "6", "over_2_wires_40_percent_in2": 11.663}
+      ]
+    },
+    "THHN_THWN_THWN-2": [
+      {"size": "14", "area_in2": 0.0097},
+      {"size": "12", "area_in2": 0.0133},
+      {"size": "10", "area_in2": 0.0211},
+      {"size": "8", "area_in2": 0.0366},
+      {"size": "6", "area_in2": 0.0507},
+      {"size": "4", "area_in2": 0.0824},
+      {"size": "3", "area_in2": 0.0973},
+      {"size": "2", "area_in2": 0.1158},
+      {"size": "1", "area_in2": 0.1562},
+      {"size": "1/0", "area_in2": 0.1853},
+      {"size": "2/0", "area_in2": 0.2223},
+      {"size": "3/0", "area_in2": 0.2679},
+      {"size": "4/0", "area_in2": 0.3237},
+      {"size": "250", "area_in2": 0.3970},
+      {"size": "300", "area_in2": 0.4608},
+      {"size": "350", "area_in2": 0.5358},
+      {"size": "400", "area_in2": 0.6190},
+      {"size": "500", "area_in2": 0.7700},
+      {"size": "600", "area_in2": 0.9250},
+      {"size": "700", "area_in2": 1.100},
+      {"size": "750", "area_in2": 1.163},
+      {"size": "800", "area_in2": 1.227},
+      {"size": "900", "area_in2": 1.356},
+      {"size": "1000", "area_in2": 1.478},
+      {"size": "1250", "area_in2": 1.860},
+      {"size": "1500", "area_in2": 2.169},
+      {"size": "1750", "area_in2": 2.477},
+      {"size": "2000", "area_in2": 2.782}
+    ]
+  }
+

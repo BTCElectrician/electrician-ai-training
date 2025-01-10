@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Electrical Calculations Knowledge Base Structure",
+  "description": "Standardized format for electrical calculations and code references designed to teach both the 'how' and 'why' of electrical work",
+  
+  "structure_definition": {
+    "base_schema": {
+      "electrical_calculations": {
+        "type": "object",
+        "properties": {
+          "calculation_type": {
+            "title": "string",
+            "description": "string"
+          }
+        }
+      }
+    },
+
+    "code_references_schema": {
+      "type": "array",
+      "items": {
+        "title": "string",
+        "section": "string",
+        "description": "string",
+        "key_points": ["string"]
+      }
+    },
+
+    "calculation_methods_schema": {
+      "basic_formula": "string",
+      "variables": {
+        "type": "object",
+        "description": "Detailed explanation of each variable including units"
+      },
+      "steps": ["string"],
+      "example": {
+        "scenario": "string",
+        "solution": ["string"]
+      },
+      "common_pitfalls": ["string"]
+    },
+
+    "practical_considerations": {
+      "installation_tips": ["string"],
+      "common_mistakes": ["string"],
+      "troubleshooting_guide": {
+        "type": "object",
+        "description": "Guide for identifying and fixing common issues"
+      }
+    }
+  },
+
+  "example_implementation": {
+    "electrical_calculations": {
+      "motor_circuits": {
+        "title": "Motor Circuit Calculations",
+        "description": "Calculations required for proper motor circuit sizing and protection",
+        "code_references": [
+          {
+            "title": "Branch Circuit Conductor Sizing",
+            "section": "NEC 430.22",
+            "description": "Requirements for sizing conductors for motor circuits",
+            "key_points": [
+              "Must be sized at 125% of FLA",
+              "Consider ambient temperature corrections",
+              "Account for voltage drop"
+            ]
+          }
+        ],
+        "calculation_methods": {
+          "branch_circuit_sizing": {
+            "basic_formula": "Conductor Ampacity = FLA × 1.25",
+            "variables": {
+              "FLA": "Full Load Amperage of the motor"
+            },
+            "steps": [
+              "Determine motor FLA from nameplate",
+              "Multiply FLA by 1.25",
+              "Select conductor size from Table 310.16"
+            ]
+          }
+        },
+        "practical_considerations": {
+          "installation_tips": [
+            "Always verify motor nameplate data",
+            "Consider future expansion needs",
+            "Account for ambient temperature"
+          ],
+          "common_mistakes": [
+            "Forgetting temperature correction factors",
+            "Not accounting for voltage drop"
+          ]
+        }
+      }
+    }
+  },
+
+  "guidelines": [
+    "Always include real-world examples with step-by-step solutions",
+    "Explain the reasoning behind each calculation step",
+    "Reference specific NEC code sections for requirements",
+    "Include common mistakes and troubleshooting guidance",
+    "Use clear, consistent terminology",
+    "Provide practical installation tips",
+    "Include both basic and advanced scenarios when relevant"
+  ]
+}

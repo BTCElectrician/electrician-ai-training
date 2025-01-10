@@ -1,0 +1,160 @@
+{
+    "electrical_calculations": {
+      "fault_current": {
+        "title": "Short-Circuit and Fault Current Calculations",
+        "description": "Essential calculations for determining and managing fault currents in electrical systems. These calculations ensure equipment can safely interrupt fault conditions and maintain selective coordination, protecting equipment and human life.",
+        "code_references": [
+          {
+            "title": "Available Fault Current Documentation",
+            "section": "NEC 110.24",
+            "description": "Requires marking of maximum available fault current on service equipment and documentation of the calculation date to ensure system awareness and compliance.",
+            "key_points": [
+              "Service equipment must be labeled with maximum available fault current",
+              "Calculation date must be included on the label",
+              "Applies only to non-dwelling units",
+              "Documentation must be available to authorized personnel",
+              "Marking must be updated when modifications affect fault current",
+              "Calculation method must be documented",
+              "Marking must be applied by qualified persons"
+            ]
+          },
+          {
+            "title": "Equipment Short-Circuit Current Rating",
+            "section": "NEC 110.10",
+            "description": "Requires electrical equipment to have appropriate short-circuit current ratings for their installation location to ensure safety.",
+            "key_points": [
+              "Equipment SCCR must exceed available fault current",
+              "Must consider motor contribution and X/R ratio for accurate ratings",
+              "Specific reference to series-rated equipment requirements per 240.86",
+              "Documentation of series rating compatibility is required",
+              "Field modifications must comply with NEC 110.24(D)"
+            ]
+          },
+          {
+            "title": "Selective Coordination Requirements",
+            "section": "NEC 517.30(G), 700.32, 620.62, 708.54",
+            "description": "Mandates selective coordination for critical systems to ensure unaffected circuits remain operational during faults.",
+            "key_points": [
+              "Must maintain coordination for the duration of the fault",
+              "Required for elevator circuits per 620.62",
+              "Required for critical operations power systems per 708.54"
+            ]
+          }
+        ],
+        "calculation_methods": {
+          "available_fault_current": {
+            "basic_formula": {
+              "equation": "Isc = VL-L / (√3 × Ztotal × X/R Factor)",
+              "description": "Calculates three-phase fault current, considering system impedance, line-to-line voltage, and X/R ratio.",
+              "variables": {
+                "Isc": {
+                  "name": "Short-Circuit Current",
+                  "unit": "amperes",
+                  "description": "Maximum available fault current"
+                },
+                "VL-L": {
+                  "name": "System Voltage",
+                  "unit": "volts",
+                  "description": "Line-to-line voltage of the system"
+                },
+                "Ztotal": {
+                  "name": "Total Impedance",
+                  "unit": "ohms",
+                  "description": "Impedance of the entire system, including transformer and conductor contributions"
+                },
+                "X/R Factor": {
+                  "name": "X/R Ratio Factor",
+                  "unit": "unitless",
+                  "description": "Adjustment factor for fault current calculations based on system reactance-to-resistance ratio."
+                }
+              },
+              "steps": [
+                "Obtain transformer and conductor impedance data",
+                "Gather system voltage and confirm X/R ratio",
+                "Use the formula to calculate base fault current",
+                "Add motor contribution as applicable",
+                "Consider location-specific adjustments"
+              ]
+            },
+            "example": {
+              "scenario": "Calculate fault current at the secondary of a 500 kVA, 480V transformer with 4.5% impedance and X/R ratio of 10",
+              "solution": {
+                "step1": {
+                  "action": "Convert transformer size to MVA",
+                  "calculation": "500 kVA = 0.5 MVA"
+                },
+                "step2": {
+                  "action": "Calculate base fault current",
+                  "calculation": "Isc = 480 / (√3 × 0.045 × 10) ≈ 10,324 A"
+                },
+                "step3": {
+                  "action": "Add motor contribution",
+                  "calculation": "Total Isc = 10,324 A + motor contribution"
+                }
+              }
+            }
+          },
+          "selective_coordination": {
+            "methods": {
+              "time_current_curves": {
+                "description": "Analyzes overcurrent device operation times to ensure proper coordination.",
+                "key_factors": [
+                  "Operating time at various current levels",
+                  "Instantaneous trip settings",
+                  "Time delays",
+                  "Device characteristics"
+                ]
+              }
+            },
+            "example": {
+              "scenario": "Emergency system coordination in a healthcare facility",
+              "solution": {
+                "step1": {
+                  "action": "Plot time-current curves for all devices",
+                  "consideration": "Include all levels from utility to branch circuits"
+                },
+                "step2": {
+                  "action": "Verify curve separation",
+                  "requirement": "Ensure a minimum 0.1-second separation"
+                },
+                "step3": {
+                  "action": "Adjust instantaneous settings if necessary",
+                  "consideration": "Prevent overlaps in instantaneous regions"
+                }
+              }
+            }
+          }
+        },
+        "practical_considerations": {
+          "installation_tips": [
+            "Verify utility fault current before calculations",
+            "Document all assumptions and data sources",
+            "Include motor contributions in fault current calculations",
+            "Plan for future system modifications",
+            "Ensure all equipment ratings are checked before installation"
+          ],
+          "common_mistakes": [
+            "Omitting motor contributions",
+            "Ignoring X/R ratio for equipment ratings",
+            "Failing to document calculations and modifications",
+            "Overlooking terminal temperature limitations",
+            "Using outdated or incomplete impedance data"
+          ],
+          "troubleshooting_guide": {
+            "high_fault_current": [
+              "Verify transformer impedance data",
+              "Consider effects of parallel sources",
+              "Evaluate impact of distributed generation"
+            ],
+            "coordination_issues": [
+              "Verify device settings",
+              "Check for overlaps in time-current curves",
+              "Ensure compliance with selective coordination requirements",
+              "Review system periodically for changes"
+            ]
+          }
+        }
+      }
+    }
+  }
+  

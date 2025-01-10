@@ -1,0 +1,174 @@
+{
+  "electrical_calculations": {
+    "hvac_load": {
+      "overview": {
+        "description": "HVAC electrical load calculations involving motor circuits, protective devices, and code compliance",
+        "scope": "Covers residential and commercial HVAC systems, motors, and protection devices",
+        "primary_considerations": [
+          "Load calculations",
+          "Circuit protection",
+          "Code compliance",
+          "Safety requirements"
+        ]
+      },
+      "calculation_basics": {
+        "core_components": {
+          "single_equipment": "Use MCA (Minimum Circuit Ampacity) from manufacturer",
+          "multiple_motors": "125% largest motor FLC plus sum of other FLCs",
+          "required_components": [
+            "Compressor load",
+            "Blower motor load",
+            "Condenser fan motor load"
+          ]
+        },
+        "service_requirements": {
+          "room_ac": "100% of nameplate ampere rating",
+          "fixed_space_heating": "100% of total connected load",
+          "conductor_sizing": "Use manufacturer's MCA"
+        }
+      },
+      "code_requirements": {
+        "branch_circuits": {
+          "sizing": "Must match minimum circuit ampacity on nameplate",
+          "feeders": "125% of largest motor FLC even for non-continuous duty"
+        },
+        "load_considerations": {
+          "multiple_units": "125% largest motor plus sum of others",
+          "combination_loads": "Use larger of heating or cooling load",
+          "noncoincident_loads": "Calculate only the larger load for heating/cooling"
+        },
+        "nec_references": {
+          "220.60": "Noncoincident loads",
+          "430.22": "Single motor conductor sizing",
+          "430.24": "Multiple motor applications",
+          "430.52": "Motor circuit protection"
+        }
+      },
+      "reference_tables": {
+        "protection_devices": {
+          "title": "Table 430.52(C)(1) Maximum Rating for Motor Protection Devices",
+          "percentage_of_full_load_current": {
+            "single_phase_motors": {
+              "nontime_delay_fuse": 300,
+              "dual_element_fuse": 175,
+              "instantaneous_trip_breaker": 800,
+              "inverse_time_breaker": 250
+            },
+            "ac_polyphase_motors": {
+              "nontime_delay_fuse": 300,
+              "dual_element_fuse": 175,
+              "instantaneous_trip_breaker": 800,
+              "inverse_time_breaker": 250
+            },
+            "dc_motors": {
+              "nontime_delay_fuse": 150,
+              "dual_element_fuse": 150,
+              "instantaneous_trip_breaker": 250,
+              "inverse_time_breaker": 150
+            }
+          },
+          "notes": [
+            "Values for nontime delay fuse apply to time-delay Class CC fuses",
+            "Inverse time breaker values cover nonadjustable types",
+            "Special considerations apply for low-torque, low-speed synchronous motors"
+          ]
+        },
+        "motor_flc": {
+          "single_phase_230V": {
+            "1/4_HP": "5.8A",
+            "1/2_HP": "7.2A",
+            "1_HP": "13.8A",
+            "2_HP": "23.0A"
+          },
+          "three_phase_230V": {
+            "1/2_HP": "2.2A",
+            "1_HP": "3.6A",
+            "2_HP": "6.8A",
+            "5_HP": "15.2A"
+          }
+        },
+        "typical_hvac_loads": {
+          "residential": {
+            "1.5_ton": {"MCA": "15A", "max_breaker": "20A"},
+            "2_ton": {"MCA": "20A", "max_breaker": "30A"},
+            "3_ton": {"MCA": "25A", "max_breaker": "35A"},
+            "4_ton": {"MCA": "30A", "max_breaker": "45A"},
+            "5_ton": {"MCA": "35A", "max_breaker": "50A"}
+          }
+        }
+      },
+      "calculation_methods": {
+        "basic_load": {
+          "formula": "Total Current = RLA + FLA",
+          "variables": {
+            "RLA": {
+              "name": "Running Load Amps",
+              "description": "Compressor running load amperage"
+            },
+            "FLA": {
+              "name": "Full Load Amps",
+              "description": "Fan motor full load amperage"
+            }
+          }
+        },
+        "multiple_motors": {
+          "formula": "Total = (1.25 × Largest Motor FLC) + Sum of Other Motor FLCs",
+          "example": "For 15HP, 208V, three-phase motor: 46.2A × 1.25 = 57.75A"
+        },
+        "demand_factors": {
+          "room_ac": "100% of nameplate",
+          "space_heating": {
+            "three_or_less": "100% of largest + 100% of others",
+            "four_or_more": "100% of largest + 100% of second largest + 100% of third largest + 100% of remainder"
+          }
+        }
+      },
+      "common_errors": {
+        "calculation_mistakes": [
+          "Incorrectly dividing MCA by 1.25",
+          "Using wrong current values (RLA vs FLA vs MCA)",
+          "Not accounting for all components"
+        ],
+        "sizing_errors": [
+          "Using nameplate instead of table values",
+          "Forgetting temperature correction factors",
+          "Incorrect terminal temperature ratings"
+        ]
+      },
+      "verification_process": {
+        "load_assessment": [
+          "Identify all connected loads",
+          "Calculate individual load requirements",
+          "Apply appropriate demand factors",
+          "Sum total connected load",
+          "Verify against equipment specifications"
+        ],
+        "documentation_requirements": [
+          "Equipment nameplate data",
+          "Calculation worksheets",
+          "Applied demand factors",
+          "Protection device ratings"
+        ]
+      },
+      "safety_requirements": {
+        "protection_devices": {
+          "overload": "115-125% of motor FLA",
+          "short_circuit": "Per Table 430.52",
+          "terminal_rating": "Verify 75°C terminal ratings"
+        },
+        "installation_requirements": {
+          "disconnecting_means": "Required within sight of motor",
+          "overcurrent_protection": "Required for each motor circuit",
+          "grounding": "Equipment grounding conductor required"
+        }
+      },
+      "terminology": {
+        "MCA": "Minimum Circuit Ampacity - minimum required ampacity of conductors",
+        "FLA": "Full Load Amps - current draw at full rated load",
+        "RLA": "Rated Load Amps - rated current draw under normal conditions",
+        "FLC": "Full Load Current - current draw at full rated load (from tables)",
+        "MOCP": "Maximum Overcurrent Protection - maximum allowed protection device size"
+      }
+    }
+  }
+}
