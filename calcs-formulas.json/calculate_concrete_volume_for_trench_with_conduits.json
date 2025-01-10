@@ -1,0 +1,132 @@
+{
+    "calculation_type": "Concrete Volume for a Trench",
+    "description": "Calculate the concrete volume needed for a trench, accounting for adjustments for conduits and real-world considerations.",
+    "calculation_methods": {
+      "basic_formula": {
+        "formula": "Concrete Volume (cubic feet) = Trench Length × Trench Width × Trench Depth",
+        "variables": {
+          "Trench Length": "The length of the trench (feet).",
+          "Trench Width": "The width of the trench (feet).",
+          "Trench Depth": "The depth of the trench (feet)."
+        },
+        "logic": [
+          "Step 1: Calculate the trench volume without considering conduits."
+        ]
+      },
+      "conduit_adjustments": {
+        "conduit_volume_formula": "Conduit Volume = π × (Conduit Diameter / 2)^2 × Conduit Length",
+        "variables": {
+          "Conduit Diameter": "The diameter of the conduit (feet).",
+          "Conduit Length": "The length of the conduit (feet)."
+        },
+        "steps": [
+          "Step 2: Calculate Total Conduit Volume by multiplying the volume of one conduit by the number of conduits.",
+          "Step 3: Subtract Total Conduit Volume from the Trench Volume to get Adjusted Concrete Volume."
+        ]
+      },
+      "example_calculation": {
+        "inputs": {
+          "Trench Dimensions": {
+            "Length": "100 feet",
+            "Width": "2 feet",
+            "Depth": "1 foot"
+          },
+          "Conduit Details": {
+            "Diameter": "3 inches",
+            "Number of Conduits": "4"
+          }
+        },
+        "steps": [
+          "Concrete Volume (without conduits): 100 × 2 × 1 = 200 cubic feet.",
+          "Conduit Volume (each): π × (0.125)^2 × 100 ≈ 4.91 cubic feet.",
+          "Total Conduit Volume: 4.91 × 4 ≈ 19.64 cubic feet.",
+          "Adjusted Concrete Volume: 200 - 19.64 = 180.36 cubic feet."
+        ]
+      }
+    },
+    "practical_considerations": {
+      "waste_factor_adjustment": "Final Volume = Adjusted Concrete Volume × 1.10",
+      "unit_conversion": "Cubic Yards = Final Volume (cubic feet) ÷ 27",
+      "tips": [
+        "Allow for input adjustments in trench dimensions, conduit size, and count.",
+        "Provide conversions (e.g., inches to feet).",
+        "Consider adding waste factors for practical on-site adjustments."
+      ]
+    },
+    "complete_formula": "Final Volume (yd³) = [((L × W × D) - (π × r² × L × n)) × 1.10] ÷ 27",
+    "variables": {
+      "L": "Trench Length (feet)",
+      "W": "Trench Width (feet)",
+      "D": "Trench Depth (feet)",
+      "r": "Conduit Radius (feet)",
+      "n": "Number of Conduits",
+      "1.10": "Waste factor (10%)",
+      "27": "Conversion factor to cubic yards"
+    },
+    "conduit_dimensions": {
+      "trade_sizes": [
+        "3/4\"",
+        "1\"",
+        "1-1/4\"",
+        "1-1/2\"",
+        "2\"",
+        "2-1/2\"",
+        "3\"",
+        "3-1/2\"",
+        "4\"",
+        "5\"",
+        "6\""
+      ],
+      "types": {
+        "Schedule 80 PVC": {
+          "3/4\"": 1.050,
+          "1\"": 1.315,
+          "1-1/4\"": 1.660,
+          "1-1/2\"": 1.900,
+          "2\"": 2.375,
+          "2-1/2\"": 2.875,
+          "3\"": 3.500,
+          "3-1/2\"": 4.000,
+          "4\"": 4.500,
+          "5\"": 5.563,
+          "6\"": 6.625
+        },
+        "EMT": {
+          "3/4\"": 0.922,
+          "1\"": 1.163,
+          "1-1/4\"": 1.510,
+          "1-1/2\"": 1.740,
+          "2\"": 2.197,
+          "2-1/2\"": 2.875,
+          "3\"": 3.500,
+          "3-1/2\"": 4.000,
+          "4\"": 4.500
+        },
+        "IMC": {
+          "3/4\"": 1.029,
+          "1\"": 1.290,
+          "1-1/4\"": 1.638,
+          "1-1/2\"": 1.883,
+          "2\"": 2.360,
+          "2-1/2\"": 2.857,
+          "3\"": 3.476,
+          "3-1/2\"": 3.971,
+          "4\"": 4.466
+        },
+        "Rigid": {
+          "3/4\"": 1.050,
+          "1\"": 1.315,
+          "1-1/4\"": 1.660,
+          "1-1/2\"": 1.900,
+          "2\"": 2.375,
+          "2-1/2\"": 2.875,
+          "3\"": 3.500,
+          "3-1/2\"": 4.000,
+          "4\"": 4.500,
+          "5\"": 5.563,
+          "6\"": 6.625
+        }
+      }
+    }
+  }
+  
